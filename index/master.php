@@ -1,9 +1,9 @@
-<?php
+﻿<?php
 header("Content-Type: application/json;charset=utf-8");
 //header('Content-type:text/html;charset=utf-8');
 
 
-getTableData();
+getTableData();2
 
 function getTableData(){
 
