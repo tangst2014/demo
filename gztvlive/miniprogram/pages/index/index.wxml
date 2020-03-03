@@ -1,0 +1,33 @@
+<view class="contaier">
+  <view class="tag-title">全国两会</view>
+  <view>图片slide</view>
+  <view>时间：2020年4月~2020年5月</view>
+  <view>地点：北京</view>
+  <view class="tag-plan">
+    <view class="name">唐斯腾</view>
+    <view class="progress">进度</view>
+    <view class="planed">
+        <text>已做工作</text>
+        <block wx:for="{{worked}}" wx:key="index" catchtap="onSet">
+          <view class="work">
+            <text>{{item.title}}</text>
+            <checkbox-group class="group" data-index='{{index}}' bindchange="checkboxChange">
+              <view class="label-1" wx:for="{{item.values}}" wx:key="index">
+                <label>
+                  <checkbox hidden value="{{item.value}}" checked="{{item.checked}}"></checkbox>
+                  <view class="label-1__icon">
+                    <view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+                  </view>
+                  <text class="label-1__text">{{item.name}}</text>
+                </label>
+              </view>
+            </checkbox-group>
+          </view>
+        </block>
+    </view>
+    <view class="planing">
+      <view>未做工作</view>
+      <view class="work"></view>
+    </view>
+  </view>
+</view>
